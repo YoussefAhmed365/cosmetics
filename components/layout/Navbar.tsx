@@ -1,14 +1,33 @@
 import Image from "next/image";
-import { Menu } from "lucide-react";
+import { Menu, User2 } from "lucide-react";
+
+const navLinks = [
+    {
+        title: "Home",
+        href: "#",
+    },
+    {
+        title: "About",
+        href: "#",
+    },
+    {
+        title: "Beauty",
+        href: "#",
+    },
+    {
+        title: "Products",
+        href: "#",
+    },
+];
 
 export default function Navbar() {
     return (
-        <nav className="fixed top-0 lg:top-5 left-0 lg:left-1/2 lg:-translate-x-1/2 py-4 px-5 lg:rounded-xl lg:border lg:border-b-white/30 lg:border-l-white/30 lg:border-t-transparent lg:border-r-transparent w-full lg:w-4/5 bg-white/20 backdrop-blur-md">
+        <nav className="fixed z-50 top-0 lg:top-5 left-0 lg:left-1/2 lg:-translate-x-1/2 py-3 px-6 sm:px-10 lg:px-16 lg:rounded-xl lg:border lg:border-white/20 w-full lg:w-4/5 bg-white/10 backdrop-blur-sm">
             <div className="grid grid-cols-2 lg:grid-cols-3 items-center justify-between gap-5">
                 <div className="col-span-1">
                     <Image
                         loading="eager"
-                        src="/vercel.svg"
+                        src="/next.svg"
                         alt="Logo"
                         width={60}
                         height={60}
@@ -16,51 +35,29 @@ export default function Navbar() {
                     />
                 </div>
 
-                <div className="col-span-1">
-                    <ul className="hidden lg:flex items-center justify-center gap-5">
-                        <li>
-                            <a
-                                href="#"
-                                className="text-sm font-medium text-white hover:text-gray-900"
-                            >
-                                Home
-                            </a>
-                        </li>
-                        <li>
-                            <a
-                                href="#"
-                                className="text-sm font-medium text-white hover:text-gray-900"
-                            >
-                                About
-                            </a>
-                        </li>
-                        <li>
-                            <a
-                                href="#"
-                                className="text-sm font-medium text-white hover:text-gray-900"
-                            >
-                                Beauty
-                            </a>
-                        </li>
-                        <li>
-                            <a
-                                href="#"
-                                className="text-sm font-medium text-white hover:text-gray-900"
-                            >
-                                Products
-                            </a>
-                        </li>
+                <div className="hidden lg:block lg:col-span-1">
+                    <ul className="flex items-center justify-center gap-x-8">
+                        {navLinks.map((link, index) => (
+                            <li key={index}>
+                                <a
+                                    href={link.href}
+                                    className="font-medium text-lg text-secondary hover:text-secondary/80"
+                                >
+                                    {link.title}
+                                </a>
+                            </li>
+                        ))}
                     </ul>
                 </div>
 
-                <div className="hidden lg:block col-span-1">
-                    <button className="bg-primary text-white hover:text-accent hover:bg-primary/90 py-2 px-4 rounded-full text-sm font-medium transition-all cursor-pointer">
+                <div className="hidden lg:block lg:col-span-1 justify-self-end">
+                    <button className="bg-primary text-white hover:bg-accent py-3 px-4 rounded-full text-sm font-medium transition-all cursor-pointer">
                         Contact Service
                     </button>
                 </div>
 
-                <div className="block lg:hidden col-span-1">
-                    <button className="bg-transparent text-white hover:cursor-pointer">
+                <div className="col-span-1 lg:hidden justify-self-end">
+                    <button className="bg-transparent text-primary hover:cursor-pointer">
                         <Menu className="w-6 h-6" />
                     </button>
                 </div>
