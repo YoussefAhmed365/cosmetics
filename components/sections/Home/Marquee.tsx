@@ -13,7 +13,7 @@ const SPONSORING_BRANDS = [
 
 export default function Marquee() {
   return (
-    <section className="group overflow-hidden bg-accent py-6">
+    <section id="marquee" className="group overflow-hidden bg-accent py-6">
       <div className="flex w-max animate-marquee group-hover:[animation-play-state:paused]">
         {[...SPONSORING_BRANDS, ...SPONSORING_BRANDS].map(
           (brand, index) => (

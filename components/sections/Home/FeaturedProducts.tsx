@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { featuredProducts } from "@/lib/data";
 import Button from "@/components/ui/Button";
+import { ArrowRightIcon } from "lucide-react";
 
 export default function FeaturedProducts() {
     // Generate JSON-LD Schema for SEO
@@ -35,21 +36,21 @@ export default function FeaturedProducts() {
             {/* SEO Structured Data */}
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
-            < div className="text-center mb-12" >
-                <h2 className="text-3xl md:text-5xl font-bold text-accent mb-4">Our Signature Collection</h2>
+            <div className="text-center mb-12">
+                <h2 className="font-brand text-3xl md:text-5xl font-bold text-accent mb-4">Our Signature Collection</h2>
                 <p className="text-lg text-accent/70">Elevate your routine with our best-selling essentials.</p>
-            </div >
+            </div>
 
             {/* Responsive Grid */}
-            < div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8" >
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8" >
                 {
                     featuredProducts.map((product) => (
                         <article
                             key={product.id}
-                            className="flex flex-col bg-white/30 backdrop-blur-md rounded-2xl border border-white/40 shadow-[0_8px_30px_rgb(0,0,0,0.04)] overflow-hidden transition-transform hover:-translate-y-1 focus-within:ring-2 focus-within:ring-primary"
+                            className="flex flex-col bg-white/20 backdrop-blur-md rounded-2xl border border-white/40 shadow-[0_8px_30px_rgb(0,0,0,0.04)] overflow-hidden transition-transform hover:-translate-y-1 focus-within:ring-2 focus-within:ring-primary"
                         >
                             {/* Product Image */}
-                            <div className="relative w-full aspect-square bg-white/40">
+                            <div className="relative w-full aspect-square">
                                 <Image
                                     src={product.image}
                                     alt={product.name}
@@ -72,7 +73,7 @@ export default function FeaturedProducts() {
                         </article>
                     ))
                 }
-            </div >
-        </section >
+            </div>
+        </section>
     );
 }

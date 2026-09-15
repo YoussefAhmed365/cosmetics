@@ -6,8 +6,8 @@ const variantStyles: Record<ButtonVariant, string> = {
     primary: "bg-primary text-accent px-8 py-3 rounded-full hover:bg-primary-hover hover:text-secondary active:bg-primary-active active:text-secondary shadow-lg hover:shadow-xl",
     secondary: "bg-secondary text-accent px-8 py-3 rounded-full hover:bg-accent hover:text-secondary shadow-lg hover:shadow-xl active:bg-primary-active active:text-secondary",
     outline: "bg-transparent border-2 border-secondary px-8 py-3 rounded-full text-secondary hover:bg-secondary hover:text-accent active:bg-secondary-active active:border-secondary-active active:text-accent",
-    "text-light": "text-primary hover:text-accent active:text-accent",
-    "text-dark": "text-secondary hover:text-primary active:text-primary",
+    "text-dark": "text-primary hover:text-accent active:text-accent",
+    "text-light": "text-secondary hover:text-primary active:text-primary",
 };
 
 const baseStyles = "inline-flex items-center justify-center cursor-pointer text-base md:text-lg font-medium transition-all disabled:opacity-50 disabled:cursor-not-allowed disabled:pointer-events-none";

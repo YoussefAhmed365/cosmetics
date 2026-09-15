@@ -8,7 +8,7 @@ export default function Hero() {
             <div className="absolute inset-0 w-full h-full">
                 <Image
                     alt="Hero Cover"
-                    src="/images/full-hero-overlay.jpg"
+                    src="/images/hero-overlay.jpg"
                     fill
                     priority
                     sizes="100vw"
