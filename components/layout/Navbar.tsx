@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Menu, User2 } from "lucide-react";
+import Button from "../ui/Button";
 
 const navLinks = [
     {
@@ -51,9 +52,7 @@ export default function Navbar() {
                 </div>
 
                 <div className="hidden lg:block lg:col-span-1 justify-self-end">
-                    <button className="bg-primary text-white hover:bg-accent py-3 px-4 rounded-full text-sm font-medium transition-all cursor-pointer">
-                        Contact Service
-                    </button>
+                    <Button href="#" type="secondary" children="Contact Service" />
                 </div>
 
                 <div className="col-span-1 lg:hidden justify-self-end">

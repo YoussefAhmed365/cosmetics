@@ -1,11 +1,15 @@
-import Navbar from "@/components/layout/Navbar";
-import Hero from "@/components/sections/Hero";
+import Hero from "@/components/sections/Home/Hero";
+import Marquee from "@/components/sections/Home/Marquee";
+import FeaturedProducts from "@/components/sections/Home/FeaturedProducts";
 
 export default function Home() {
-  return (
-    <>
-      <Navbar />
-      <Hero />
-    </>
-  );
+    return (
+        <>
+            <Hero />
+            <Marquee />
+            <main className="p-10">
+                <FeaturedProducts />
+            </main>
+        </>
+    );
 }
